@@ -3,16 +3,7 @@
 //  FocusIntents
 //
 //  Created by Mikhail Filimonov on 25.04.2024.
-//  Copyright © 2024 Telegram. All rights reserved.
-//
 
-import AppIntents
-import OSLog
-import TelegramCore
-import Postbox
-import SwiftSignalKit
-import InAppSettings
-import ApiCredentials
 
 
 @available(macOS 13, *)
@@ -52,18 +43,6 @@ struct FocusFilter: SetFocusFilterIntent {
         return FocusFilterAppContext(notificationFilterPredicate: nil)
     }
     
-    static func suggestedFocusFilters(for context: FocusFilterSuggestionContext) async -> [FocusFilter] {
-        let workFilter = FocusFilter()
-        workFilter.alwaysUseDarkMode = true
-        workFilter.unableStatus = true
-        return [workFilter]
-    }
-    
-    func perform() async throws -> some IntentResult {
-        let model = AppIntentDataModel(alwaysUseDarkMode: self.alwaysUseDarkMode, useUnableStatus: self.unableStatus)
-        if let model = model.encoded() {
-            UserDefaults(suiteName: ApiEnvironment.intentsBundleId)?.set(model, forKey: AppIntentDataModel.key)
-        }
-        return .result()
+    static func suggestedFocusFilters(for 
     }
 }
