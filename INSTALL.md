@@ -1,8 +1,6 @@
-# How to Build Telegram for macOS
-
-1. Clone this repository with submodules:
+lone this repository with submodules:
 	```
-	git clone https://github.com/overtake/TelegramSwift.git --recurse-submodules
+	gips://github.com/overtake/TelegramSwift.git --recurse-submodules
 	```
 2. Install Homebrew:
 	```
@@ -21,7 +19,7 @@
 	sh %project_dir%/scripts/configure_frameworks.sh
 	```
 
-6. Open `Telegram-Mac.xcworkspace` in [the latest Xcode](https://apps.apple.com/us/app/xcode/id497799835).  
+6. Open `Telegram-Mac.xcworkspace` in [the latest 
 7. Setup codesign and **Build**!
 
 
